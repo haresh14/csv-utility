@@ -1,0 +1,21 @@
+<tr>
+    <th>Total <%= data.length %></th>
+    <th></th>
+    <th><%= '%.2f' % col('hrs_a').reduce(:+) %></th>
+    <th><%= '%.2f' % col('hrs_b').reduce(:+) %></th>
+    <th><%= '%.2f' % col('hrs_c').reduce(:+) %></th>
+    <th><%= '%.2f' % col('hrs_d').reduce(:+) %></th>
+    <th></th>
+</tr>
+<tr>
+    <th>Count</th>
+    <th></th>
+    <th><%= col('hrs_a').select {|hrs| hrs > 0 }.length() %></th>
+    <th><%= col('hrs_b').select {|hrs| hrs > 0 }.length() %></th>
+    <th><%= col('hrs_c').select {|hrs| hrs > 0 }.length() %></th>
+    <th><%= col('hrs_d').select {|hrs| hrs > 0 }.length() %></th>
+    <th></th>
+</tr>
+
+</table>
+<body></html>

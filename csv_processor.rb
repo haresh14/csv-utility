@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 =begin
   cat scoping.csv | ruby csv_processor.rb --row-template 'row-template.erb'
   cat scoping.csv | ruby csv_processor.rb --row-template 'row-template.erb' --csv-header 'contact_id,opportunity_id,contact_created,opportunity_created,project_start,farming,first_name,last_name,company,opportunity,scope,project'
