@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 =begin
   cat scoping.csv | ruby csv_processor.rb --row-template 'row-template.erb'
   cat scoping.csv | ruby csv_processor.rb --row-template 'row-template.erb' --csv-header 'contact_id,opportunity_id,contact_created,opportunity_created,project_start,farming,first_name,last_name,company,opportunity,scope,project'
@@ -34,6 +36,10 @@ class Generator
   def to_s(template)
     @erb = ERB.new(template, 0, '>')
     @erb.result(binding)
+  end
+
+  def col (col)
+    return data.map{|row| row[col]}
   end
 
   def format_pg_date(val, format)
