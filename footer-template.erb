@@ -1,0 +1,14 @@
+  </tbody>
+  <tfoot>
+    <tr>
+      <th><%= column("contact_id").count_unique %></th>
+      <th><%= column("opportunity_id").count %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Total</th>
+      <th><%= format_number(column("scope").sum, "%.2f") %></th>
+      <th><%= format_number(column("project").average, "%.2f") %></th>
+    </tr>
+  </tfoot>
+</table>

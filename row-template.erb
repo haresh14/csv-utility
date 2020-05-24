@@ -1,0 +1,10 @@
+    <tr>
+      <td><%= csvRow["contact_id"] %></td>
+      <td><%= csvRow["opportunity_id"] %></td>
+      <td><%= csvRow["company"] %></td>
+      <td><a href="https://me.crm.com/contact/<%= csvRow["contact_id"] %>"><%= csvRow["first_name"] %> <%= csvRow["last_name"] %><a/></td>
+      <td><%= csvRow["opportunity"] %></td>
+      <td><%= format_pg_date(csvRow["project_start"], "%d-%m-%Y") %></td>
+      <td><%= format_number(csvRow["scope"], "%.2f") %></td>
+      <td><%= format_number(csvRow["project"], "%.0f") %></td>
+    </tr>
