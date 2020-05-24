@@ -36,6 +36,10 @@ class Generator
     @erb.result(binding)
   end
 
+  def col (col)
+    return data.map{|row| row[col]}
+  end
+
   def format_pg_date(val, format)
     if val == nil
       return val
